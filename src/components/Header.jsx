@@ -1,7 +1,6 @@
 import {useState } from 'react'
 import logo from '../../images/logo.png'
 import {Link} from 'react-router-dom';
-import useOnlinestatus from '../utils/useOnlinestatus';
 import {useSelector} from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import IconButton from '@mui/material/IconButton';
@@ -24,7 +23,7 @@ const Header = () =>{
                     {/* <li><Link to="/contact">Contact Us</Link></li> */}
                     <Link to="/cart">
                         <IconButton color="inherit">
-                            <ShoppingCartIcon sx={{ fontSize:35 }}/>
+                            <ShoppingCartIcon sx={{ fontSize:33 }}/>
                          </IconButton>
                     </Link>
                     <span className='cart-items-count'>{cartItems.length}</span>

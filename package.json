@@ -1,7 +1,7 @@
 {
   "name": "lavkushwaha",
   "version": "1.0.0",
-  "description": "This is namaste react by akshay saini",
+  "description": "This is food ordering webiste",
   "scripts": {
     "start": "parcel ./index.html",
     "build": "parcel build ./index.html",

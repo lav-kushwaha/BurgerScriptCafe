@@ -7,17 +7,14 @@ import useOnlinestatus from "../utils/useOnlinestatus";
 import InternetConnectionChecker from "./Nointernet";
 
 const Body = () => {
-  //State variable - useState Hooks.
   const[list,setList] = useState([]);
   const[filterList,setFilterList] = useState([]);
   const[search,setSearch] = useState("");
 
 
-//Higher Order Component=> It takes a component which is Restaurant Card.
 const VegItem = VegItems(RestaurantCard);
 
 
-  // console.log(list)
   useEffect(()=>{
     fetchData();
   },[])
@@ -33,7 +30,7 @@ const VegItem = VegItems(RestaurantCard);
 
   //Filteration Logic.
   const FilterCard =()=>{
-     const ratingsFilter = list.filter((item)=>item.avgRating > 4)
+     const ratingsFilter = list.filter((item)=>item.avgRating > 4.5)
      setFilterList(ratingsFilter)
   }
 
@@ -78,7 +75,7 @@ const VegItem = VegItems(RestaurantCard);
                  onChange={(e)=>setSearch(e.target.value)}/>
                   <button onClick={SearchFood}>Search</button>
               </div>
-              <button className="filter-btn" onClick={FilterCard}>Top Rated Restaurant</button>
+              <button className="filter-btn" onClick={FilterCard}>Top Rated Restaurant 4.5+</button>
               <button className="filter-btn" onClick={ResetFilter}>Reset</button>
               <button className="filter-btn" onClick={PureVeg}>Pure Veg</button>
               <button className="filter-btn" onClick={LessThan300}>Less than Rs. 300</button>
